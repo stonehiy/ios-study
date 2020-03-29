@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AbA-gf-WpW">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4b8-49-BUf">
+            <objects>
+                <navigationController id="AbA-gf-WpW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yiv-Fa-Tif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q1h-ry-o0t" kind="relationship" relationship="rootViewController" id="WMK-QY-1cG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfv-XT-Sx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1666" y="-159"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="zpu-rH-Iel">
+            <objects>
+                <viewController id="q1h-ry-o0t" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWU-92-2NO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3N-sc-LmN">
+                                <rect key="frame" x="20" y="144" width="335" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="90r-Cc-Sze"/>
+                                </constraints>
+                                <state key="normal" title="buttom 进入"/>
+                                <connections>
+                                    <segue destination="gO1-0h-AAZ" kind="show" id="qx8-RG-pTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkJ-2U-bca">
+                                <rect key="frame" x="20" y="201" width="335" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iYE-2U-vVE"/>
+                                </constraints>
+                                <state key="normal" title="登录页面"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="q1h-ry-o0t" eventType="touchUpInside" id="sEE-yH-axt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-ZX-Lew">
+                                <rect key="frame" x="20" y="251" width="335" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QSu-9J-GhS"/>
+                                </constraints>
+                                <state key="normal" title="TabbarController页面"/>
+                                <connections>
+                                    <action selector="btnTabbar:" destination="q1h-ry-o0t" eventType="touchUpInside" id="bnj-v0-MOQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-cm-bmf">
+                                <rect key="frame" x="15" y="311" width="345" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Iu-H0-YW0"/>
+                                </constraints>
+                                <state key="normal" title="UITableView"/>
+                                <connections>
+                                    <action selector="btnTableViewPage:" destination="q1h-ry-o0t" eventType="touchUpInside" id="SUw-Ha-2sq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hCc-cm-bmf" secondAttribute="trailing" constant="15" id="1aS-m4-qIK"/>
+                            <constraint firstItem="jkJ-2U-bca" firstAttribute="top" secondItem="b3N-sc-LmN" secondAttribute="bottom" constant="27" id="5gd-Ct-8EM"/>
+                            <constraint firstItem="wEk-Xd-hNu" firstAttribute="trailing" secondItem="b3N-sc-LmN" secondAttribute="trailing" constant="20" id="FtF-dY-VCa"/>
+                            <constraint firstItem="hCc-cm-bmf" firstAttribute="top" secondItem="uZK-ZX-Lew" secondAttribute="bottom" constant="30" id="Kni-qA-B7J"/>
+                            <constraint firstItem="wEk-Xd-hNu" firstAttribute="trailing" secondItem="uZK-ZX-Lew" secondAttribute="trailing" constant="20" id="Qfc-jV-0uf"/>
+                            <constraint firstItem="jkJ-2U-bca" firstAttribute="leading" secondItem="wEk-Xd-hNu" secondAttribute="leading" constant="20" id="VWW-ff-wsa"/>
+                            <constraint firstItem="uZK-ZX-Lew" firstAttribute="top" secondItem="jkJ-2U-bca" secondAttribute="bottom" constant="20" id="XWh-rV-5OC"/>
+                            <constraint firstItem="wEk-Xd-hNu" firstAttribute="trailing" secondItem="jkJ-2U-bca" secondAttribute="trailing" constant="20" id="cys-Za-Dpt"/>
+                            <constraint firstItem="uZK-ZX-Lew" firstAttribute="leading" secondItem="wEk-Xd-hNu" secondAttribute="leading" constant="20" id="fgc-Ir-jui"/>
+                            <constraint firstItem="b3N-sc-LmN" firstAttribute="leading" secondItem="wEk-Xd-hNu" secondAttribute="leading" constant="20" id="q6L-Nw-8RX"/>
+                            <constraint firstItem="hCc-cm-bmf" firstAttribute="leading" secondItem="wWU-92-2NO" secondAttribute="leading" constant="15" id="tkn-FA-sGM"/>
+                            <constraint firstItem="b3N-sc-LmN" firstAttribute="top" secondItem="wWU-92-2NO" secondAttribute="topMargin" constant="100" id="xKt-Ut-Cav"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wEk-Xd-hNu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8I6-b7-Tc5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vv-IC-b6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922.39999999999998" y="-159.67016491754123"/>
+        </scene>
+        <!--Frist View Controller-->
+        <scene sceneID="bH6-re-JMG">
+            <objects>
+                <viewController id="gO1-0h-AAZ" customClass="FristViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7cv-40-RgG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4a-x4-gT4">
+                                <rect key="frame" x="165" y="295" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Button 进入"/>
+                                <connections>
+                                    <segue destination="Dqm-5k-ch7" kind="show" id="EJY-TH-U1t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49G-Cd-TUE">
+                                <rect key="frame" x="165" y="383" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button 退出"/>
+                                <connections>
+                                    <action selector="btnOut:" destination="gO1-0h-AAZ" eventType="touchUpInside" id="wlt-KD-p2A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TuJ-bF-fWA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SI0-84-KYB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wf6-Rd-iQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="-160.56971514242881"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="fSX-rO-KUP">
+            <objects>
+                <viewController id="Dqm-5k-ch7" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s7K-fu-Gb5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="812-Tn-Byw">
+                                <rect key="frame" x="99" y="307" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button 退出 到上一个页面"/>
+                                <connections>
+                                    <action selector="btnOut:" destination="Dqm-5k-ch7" eventType="touchUpInside" id="Uo9-ha-3F2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3R-vB-Ruy">
+                                <rect key="frame" x="116" y="387" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button 退出到根页面"/>
+                                <connections>
+                                    <action selector="btnOutRoot:" destination="Dqm-5k-ch7" eventType="touchUpInside" id="SLj-ea-8c8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-vG-bPh">
+                                <rect key="frame" x="111" y="467" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button退出到指定页面"/>
+                                <connections>
+                                    <action selector="btnOutOther:" destination="Dqm-5k-ch7" eventType="touchUpInside" id="UwQ-EL-fgf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="vBq-r2-inO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="696-11-KtM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0e-EQ-1Sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="-231"/>
+        </scene>
+    </scenes>
+</document>
